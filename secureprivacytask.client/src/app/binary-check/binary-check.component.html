@@ -1,0 +1,29 @@
+<div>
+  <h2>Binary Verify</h2>
+
+  <form [formGroup]="verifyForm">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Binary Value</mat-label>
+        <input matInput formControlName="binaryValue">
+      </mat-form-field>
+    </div>
+
+    <div class="button-container">
+      <div class="actions">
+        <button mat-raised-button color="primary" (click)="onVerify()">Verify</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Mostra il risultato della verifica binaria -->
+  <div *ngIf="binaryResult">
+    <h3>Verification Result:</h3>
+    <p>Original Value: {{ binaryResult.originalValue }}</p>
+    <p *ngIf="binaryResult.isSuccess; else errorBlock">The binary string is valid!</p>
+    <ng-template #errorBlock>
+      <p style="color:red;">Error: {{ binaryResult.error }}</p>
+    </ng-template>
+  </div>
+</div>
+

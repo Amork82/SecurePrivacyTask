@@ -1,0 +1,9 @@
+.user-details-container{
+   border-radius: 10px;
+}
+
+.button-container{
+    display:flex;
+    flex-direction:row;
+    gap: 10px;
+}

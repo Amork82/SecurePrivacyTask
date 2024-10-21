@@ -1,0 +1,22 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()" aria-label="Toggle sidenav">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Secure Privacy test - Marco Olivieri</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side" opened>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <!--Content-->
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
