@@ -7,7 +7,7 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <form [formGroup]="filterForm">
+    <form [formGroup]="filterForm" class="left-aligned">
       <mat-form-field>
         <mat-label>First Name</mat-label>
         <input matInput formControlName="firstName" />
@@ -25,13 +25,13 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
-      <mat-checkbox formControlName="onlyEnabled">Only Enabled Users</mat-checkbox>
+      <mat-checkbox formControlName="onlyEnabled" class="checkbox-margin">Only Enabled Users</mat-checkbox>
 
-      <button mat-raised-button color="primary" (click)="search()">Search</button>
+      <button mat-raised-button color="primary" (click)="search()" >Search</button>
     </form>
   </mat-expansion-panel>
 </mat-accordion>
-<button mat-raised-button color="primary" (click)="createUser()">Create new User</button>
+<button mat-raised-button color="primary" (click)="createUser()" class="left-aligned">Create new User</button>
 
 
 <table *ngIf="(users$ | async) as users" mat-table [dataSource]="users" matSort class="mat-elevation-z8">

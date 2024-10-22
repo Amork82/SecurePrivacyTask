@@ -1,9 +1,18 @@
-.user-details-container{
-   border-radius: 10px;
+.user-details-container {
+  padding: 20px;
+  border-radius: 10px;
+  display: block;
+  text-align: left; 
+  height: 100%;
 }
 
-.button-container{
-    display:flex;
-    flex-direction:row;
-    gap: 10px;
+.mat-mdc-form-field {
+  width: 100% !important;
+  max-width: 400px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }

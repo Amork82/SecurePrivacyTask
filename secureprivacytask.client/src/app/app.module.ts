@@ -23,6 +23,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';  
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -84,6 +85,7 @@ export const MY_DATE_FORMATS = {
     MatSort,
     MatSortModule,
     MatSortHeader,
+    MatTooltipModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),   
     StoreModule.forFeature('user', userReducer),

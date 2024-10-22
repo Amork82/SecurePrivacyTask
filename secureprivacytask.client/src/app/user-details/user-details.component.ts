@@ -14,6 +14,9 @@ export class UserDetailsComponent implements OnInit {
   user!: User;
   currentFirstName?: string = "";
   currentLastName?: string = "";
+  consentDataProcessingDescription: string;
+  consentPromotionalMessagesDescription: string;
+  requestToBeForgottenDescription: string;
 
   constructor(
     private fb: FormBuilder,
@@ -21,7 +24,12 @@ export class UserDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
 
-  ) { }
+  ) {
+    this.consentDataProcessingDescription = "This refers to the user giving clear and informed permission for their personal data to be collected, stored, and processed. The consent must be specific, informed, and unambiguous, typically obtained via an opt-in checkbox or similar mechanism.";
+    this.consentPromotionalMessagesDescription = "This is the explicit consent from users to receive marketing and promotional communications, such as emails or notifications. Users must agree separately from other data processing consents, and they should have the ability to opt-out at any time.";
+    this.requestToBeForgottenDescription = "This is the user's right to request the deletion of their personal data from a company's systems. Upon request, the company must remove all personal data about the user unless there is a legitimate legal reason to retain it (e.g., regulatory compliance).";
+
+  }
 
   ngOnInit(): void {
     this.initializeForm();

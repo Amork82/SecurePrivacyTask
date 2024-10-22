@@ -52,21 +52,34 @@
     </div>
 
     <div>
-      <mat-checkbox formControlName="consentForDataProcessing">Consent for Data Processing</mat-checkbox>
+      <mat-checkbox formControlName="consentForDataProcessing">
+        Consent for Data Processing
+      </mat-checkbox>
+      <mat-icon [matTooltip]="consentDataProcessingDescription">info</mat-icon>
     </div>
+
     <div>
-      <mat-checkbox formControlName="consentForReceivingPromotionalMessages">Consent for Receiving Promotional Messages</mat-checkbox>
+      <mat-checkbox formControlName="consentForReceivingPromotionalMessages">
+        Consent for Receiving Promotional Messages
+      </mat-checkbox>
+      <mat-icon [matTooltip]="consentPromotionalMessagesDescription">info</mat-icon>
     </div>
+
     <div>
-      <mat-checkbox formControlName="requestToBeForgotten">Right to Erasure (Right to be Forgotten)</mat-checkbox>
+      <mat-checkbox formControlName="requestToBeForgotten">
+        Right to Erasure (Right to be Forgotten)
+      </mat-checkbox>
+      <mat-icon [matTooltip]="requestToBeForgottenDescription">info</mat-icon>
     </div>
+
+
 
     <div class="button-container">
       <div class="actions">
-        <button mat-raised-button color="primary" (click)="onSave()">Salva</button>
+        <button mat-raised-button color="primary" (click)="onSave()">Save</button>
       </div>
       <div class="actions">
-        <button mat-raised-button color="secondary" (click)="onClose()">Annulla</button>
+        <button mat-raised-button color="secondary" (click)="onClose()">Close</button>
       </div>
     </div>
   </form>
