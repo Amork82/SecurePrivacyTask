@@ -25,4 +25,4 @@ Clone the repository:
 - git clone in Visual Studio
 - Configure multiple Startup Project in the Solution node
 - Run the application and access it in your browser.
-# Attention! Upon launching the "client" application, please click the "Refresh" button in your browser to ensure that the backend has completed its startup after the frontend.
+### Attention! Upon launching the "client" application, please click the "Refresh" button in your browser to ensure that the backend has completed its startup after the frontend.
